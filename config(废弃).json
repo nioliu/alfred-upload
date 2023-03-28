@@ -1,7 +1,0 @@
-{
-  "AppId": "AppId",
-  "SecretId": "SecretId",
-  "SecretKey": "SecretKey",
-  "ImageBucket": "ImageBucket",
-  "MaxSize": 1000
-}
