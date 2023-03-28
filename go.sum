@@ -145,6 +145,10 @@ github.com/mitchellh/mapstructure v1.5.0 h1:jeMsZIYE/09sWLaz43PL7Gy6RuMjD2eJVyua
 github.com/mitchellh/mapstructure v1.5.0/go.mod h1:bFUtVrKA4DC2yAKiSyO/QUcy7e+RRV2QTWOzhPopBRo=
 github.com/mozillazg/go-httpheader v0.2.1 h1:geV7TrjbL8KXSyvghnFm+NyTux/hxwueTSrwhe88TQQ=
 github.com/mozillazg/go-httpheader v0.2.1/go.mod h1:jJ8xECTlalr6ValeXYdOF8fFUISeBAdw6E61aqQma60=
+github.com/nioliu/alfred v0.0.0-20230310045642-05153cae8476 h1:mMVUsb+fOJtv99Wz99C37oACfMNs1ffcXy1lCMVKgis=
+github.com/nioliu/alfred v0.0.0-20230310045642-05153cae8476/go.mod h1:DL73F3gfAJUrIgmhT8YzYdOiENWtKYwS9ns4v/9K1KA=
+github.com/nioliu/alfred v0.0.0-20230310050406-8b90c0de4a6e h1:TST9rjo7fhwnHAbSre3+q45taSLA+5NQn89jl8HM6gw=
+github.com/nioliu/alfred v0.0.0-20230310050406-8b90c0de4a6e/go.mod h1:DL73F3gfAJUrIgmhT8YzYdOiENWtKYwS9ns4v/9K1KA=
 github.com/pelletier/go-toml/v2 v2.0.6 h1:nrzqCb7j9cDFj2coyLNLaZuJTLjWjlaz6nvTvIwycIU=
 github.com/pelletier/go-toml/v2 v2.0.6/go.mod h1:eumQOmlWiOPt5WriQQqoM5y18pDHwha2N+QD+EUNTek=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=

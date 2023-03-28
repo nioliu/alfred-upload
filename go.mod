@@ -1,6 +1,6 @@
 module github/nioliu/alfred-upload
 
-go 1.19
+go 1.18
 
 require (
 	github.com/spf13/pflag v1.0.5
@@ -16,6 +16,7 @@ require (
 	github.com/magiconair/properties v1.8.7 // indirect
 	github.com/mitchellh/mapstructure v1.5.0 // indirect
 	github.com/mozillazg/go-httpheader v0.2.1 // indirect
+	github.com/nioliu/alfred v0.0.0-20230310050406-8b90c0de4a6e // indirect
 	github.com/pelletier/go-toml/v2 v2.0.6 // indirect
 	github.com/spf13/afero v1.9.3 // indirect
 	github.com/spf13/cast v1.5.0 // indirect

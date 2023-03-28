@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	util "github.com/nioliu/alfred"
 	"github.com/spf13/viper"
 	"github.com/tencentyun/cos-go-sdk-v5"
 	"net/http"
@@ -27,13 +28,14 @@ func standardRun() {
 	})
 	res, _, err := client.Bucket.Get(context.Background(), nil)
 	if err != nil {
-		PrintError(err)
+		util.PrintError(err)
 	}
-	results := &Result{Items: make([]*Item, 0, len(res.Contents))}
+
+	results := &util.Result{Items: make([]*util.Item, 0, len(res.Contents))}
 
 	if res.Contents != nil {
 		for _, content := range res.Contents {
-			results.Items = append(results.Items, &Item{
+			results.Items = append(results.Items, &util.Item{
 				Uid:          content.ETag,
 				Type:         "url",
 				Title:        content.Key,
@@ -45,7 +47,7 @@ func standardRun() {
 					"file_path": viper.GetString("ImageBucket") + "/" + content.Key,
 				},
 				QuickLookUrl: viper.GetString("ImageBucket") + "/" + content.Key,
-				Text: &Text{
+				Text: &util.Text{
 					Copy:      "![](" + viper.GetString("ImageBucket") + "/" + content.Key + ")",
 					Largetype: viper.GetString("ImageBucket") + "/" + content.Key,
 				},
@@ -55,7 +57,7 @@ func standardRun() {
 
 	bytes, err := json.Marshal(results)
 	if err != nil {
-		PrintError(err)
+		util.PrintError(err)
 	}
 	fmt.Print(string(bytes))
 }
@@ -65,7 +67,7 @@ func selfRun() {
 	req := constructListReq()
 	rsp, err := http.DefaultClient.Do(req)
 	if err != nil {
-		PrintError(err)
+		util.PrintError(err)
 	}
 	respBytes, err := httputil.DumpResponse(rsp, true)
 	if err == nil {
@@ -76,7 +78,7 @@ func selfRun() {
 func constructListReq() *http.Request {
 	req, err := http.NewRequest("GET", viper.GetString("ImageBucket"), nil)
 	if err != nil {
-		PrintError(err)
+		util.PrintError(err)
 	}
 	addAuth(req)
 
